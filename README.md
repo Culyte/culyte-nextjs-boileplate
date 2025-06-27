@@ -6,14 +6,16 @@ A modern, scalable boilerplate built with **Next.js**, **Tailwind CSS**, **ShadC
 
 ## ✨ Features
 
-- ✅ Next.js App Router (based in `app/` directory)
+- ✅ Next.js App Router (`app/` directory)
 - 🎨 Tailwind CSS with PostCSS integration
 - 🧩 ShadCN UI components (Radix-based)
 - ⚙️ Customizable CSS variables via `globals.css`
 - 💅 Font support with `@next/font` (Geist + Geist Mono)
 - 🌗 Light & dark mode with theme tokens
 - 💾 Fully typed with TypeScript
-- 🧠 Clean folder structure for hooks, store, and utils
+- 🧠 Organized folder structure (hooks, store, utils)
+- 🧹 Prettier + Tailwind + Sorted Imports
+- ✅ Commit linting + Git hook enforcement via Husky
 
 ---
 
@@ -21,67 +23,41 @@ A modern, scalable boilerplate built with **Next.js**, **Tailwind CSS**, **ShadC
 
 ````bash
 culyte-nextjs-boilerplate/
-├── app/                   # Next.js app directory
+├── .husky/                # Git hooks managed by Husky
+├── .next/                 # Next.js build output (auto-generated)
+├── .vscode/               # VSCode settings
+├── app/                   # Next.js App Router
 ├── components/            # Shared UI components
 ├── hooks/                 # Custom React hooks
-├── lib/                   # Utility libraries
-├── public/                # Static files (images, fonts, etc.)
-├── store/                 # State management (e.g. Zustand/Redux)
-├── utils/                 # Helper functions
+├── node_modules/          # Installed npm packages
+├── public/                # Static files (images, icons, etc.)
+├── store/                 # Global state management
+├── utils/                 # Utility functions and helpers
 
 ├── .gitignore             # Git ignore rules
-├── components.json        # shadcn/ui components config
-├── next-env.d.ts          # Next.js TypeScript declarations
+├── .prettierignore        # Ignore rules for Prettier
+├── .prettierrc.json       # Prettier config (with Tailwind and import sort)
+├── commitlint.config.js   # Commit message linting rules
+├── eslint.config.mjs      # ESLint configuration
+├── next-env.d.ts          # Next.js types
 ├── next.config.ts         # Next.js configuration
-├── package-lock.json      # NPM lockfile
+├── package-lock.json      # Auto-generated lockfile
 ├── package.json           # Project dependencies and scripts
-├── postcss.config.mjs     # PostCSS configuration
+├── postcss.config.mjs     # Tailwind/PostCSS config
 ├── README.md              # Project documentation
 └── tsconfig.json          # TypeScript configuration
-````
 
-
-## 🎨 Custom Theming
-
-Custom theme tokens are defined in `globals.css` using `:root` and `.dark` scopes.
-
-### 🎯 Key Tokens
-
-```css
-:root {
-  --radius: 24px;
-  --primary: #096BD8;
-  --primary-gradient: linear-gradient(to right, #086AD8, #6ED9F8);
-  --text-primary: #000000;
-  --text-secondary: rgba(0, 0, 0, 0.6);
-}
-```
-
-## Using Custom Tokens with Tailwind
-
-```
-
-<div
-  className="
-    bg-[image:var(--primary-gradient)]
-    rounded-[var(--radius)]
-    text-[var(--text-primary)]
-    shadow-[0_3.33px_10px_rgba(0,0,0,0.1)]
-  "
->
-  Styled Component
-</div>```
-
-```
 
 
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 18+
 - npm/yarn/pnpm
 
 ### Installation
+
 ```bash
 # Clone repository
 git clone https://github.com/Culyte/culyte-nextjs-boilerplate.git
@@ -96,3 +72,4 @@ npm install  # or yarn/pnpm
 npm run dev
 
 ```
+````
