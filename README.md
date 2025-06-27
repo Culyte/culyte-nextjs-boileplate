@@ -38,9 +38,8 @@ culyte-nextjs-boilerplate/
 ├── postcss.config.mjs     # PostCSS configuration
 ├── README.md              # Project documentation
 └── tsconfig.json          # TypeScript configuration
+````
 
-
----
 
 ## 🎨 Custom Theming
 
@@ -56,10 +55,11 @@ Custom theme tokens are defined in `globals.css` using `:root` and `.dark` scope
   --text-primary: #000000;
   --text-secondary: rgba(0, 0, 0, 0.6);
 }
+```
 
 ## Using Custom Tokens with Tailwind
 
-````
+```
 
 <div
   className="
@@ -74,46 +74,25 @@ Custom theme tokens are defined in `globals.css` using `:root` and `.dark` scope
 
 ```
 
+
 ## Getting Started
 
-```
+### Prerequisites
+- Node.js 18+
+- npm/yarn/pnpm
 
-# Clone the repository
+### Installation
+```bash
+# Clone repository
+git clone https://github.com/Culyte/culyte-nextjs-boilerplate.git
 
-git clone https://github.com/Culyte/culyte-nextjs-boileplate
-
-```
-
-# Navigate to the project
-
-```
-
+# Navigate to project
 cd culyte-nextjs-boilerplate
 
-```
-
 # Install dependencies
+npm install  # or yarn/pnpm
 
-```
-
-npm install
-
-```
-
-# Start the development server
-
-```
-
+# Start dev server
 npm run dev
-
-```
-
-# Build for production
-
-```
-
-npm run build
-
-```
 
 ```
