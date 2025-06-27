@@ -19,22 +19,26 @@ A modern, scalable boilerplate built with **Next.js**, **Tailwind CSS**, **ShadC
 
 ## 📁 Folder Structure
 
-├── app/ # Next.js app directory
-├── components/ # Shared components
-├── hooks/ # Custom React hooks
-├── lib/ # Utility libraries
-├── public/ # Static files
-├── store/ # State management
-├── utils/ # Helper functions
-├── .gitignore # Git ignore rules
-├── components.json # shadcn/ui components config
-├── next-env.d.ts # Next.js TypeScript decls
-├── next.config.ts # Next.js configuration
-├── package-lock.json # NPM lockfile
-├── package.json # Project dependencies
-├── postcss.config.mjs # PostCSS config
-├── README.md # Project documentation
-└── tsconfig.json # TypeScript config
+````bash
+culyte-nextjs-boilerplate/
+├── app/                   # Next.js app directory
+├── components/            # Shared UI components
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utility libraries
+├── public/                # Static files (images, fonts, etc.)
+├── store/                 # State management (e.g. Zustand/Redux)
+├── utils/                 # Helper functions
+
+├── .gitignore             # Git ignore rules
+├── components.json        # shadcn/ui components config
+├── next-env.d.ts          # Next.js TypeScript declarations
+├── next.config.ts         # Next.js configuration
+├── package-lock.json      # NPM lockfile
+├── package.json           # Project dependencies and scripts
+├── postcss.config.mjs     # PostCSS configuration
+├── README.md              # Project documentation
+└── tsconfig.json          # TypeScript configuration
+
 
 ---
 
@@ -53,20 +57,63 @@ Custom theme tokens are defined in `globals.css` using `:root` and `.dark` scope
   --text-secondary: rgba(0, 0, 0, 0.6);
 }
 
+## Using Custom Tokens with Tailwind
+
+````
+
+<div
+  className="
+    bg-[image:var(--primary-gradient)]
+    rounded-[var(--radius)]
+    text-[var(--text-primary)]
+    shadow-[0_3.33px_10px_rgba(0,0,0,0.1)]
+  "
+>
+  Styled Component
+</div>```
+
+```
 
 ## Getting Started
+
+```
+
 # Clone the repository
+
 git clone https://github.com/Culyte/culyte-nextjs-boileplate
 
+```
+
 # Navigate to the project
+
+```
+
 cd culyte-nextjs-boilerplate
 
+```
+
 # Install dependencies
+
+```
+
 npm install
 
+```
+
 # Start the development server
+
+```
+
 npm run dev
 
+```
+
 # Build for production
+
+```
+
 npm run build
+
+```
+
 ```
